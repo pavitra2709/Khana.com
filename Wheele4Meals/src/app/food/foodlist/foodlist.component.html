@@ -1,0 +1,59 @@
+<app-header></app-header>
+<app-restaurantdetail></app-restaurantdetail>
+<mat-tab-group >
+    <mat-tab label="Food"> 
+        <div class="container"
+        fxLayout="row"
+        fxLayout
+        fxLayout.xs="column"
+        fxLayoutAlign="center"
+        fxLayoutGap="10px"
+        fxLayoutGap.xs="0">
+     <div class="item item-1" fxFlex="20%">
+      <ul>
+        <li>South Indian</li>
+        <li>North Indian</li>
+        <li>Desserts</li>
+        <li>Biryani </li>
+        <li>Starters</li>
+      </ul>
+      </div>
+    <div class="item item-2" fxFlex fxFlexOrder="1" fxFlex="80%">
+       
+        <div fxFlex fxFlexOrder="1" fxFlex="40%">
+            <h3>South Indian</h3>
+            <br>
+            <mat-icon class="adding">add_shopping_cart</mat-icon>
+             <div *ngFor="let food of food$ | async">
+                
+             <mat-card class="example-card" >
+                <div fxFlex fxFlexOrder="1" fxFlex="60%">
+              <mat-card-content>
+              <h4>
+               {{food.name}}
+              </h4>
+              <span>{{food.cuisine}}</span>
+             </mat-card-content>
+             <mat-card-actions>
+              <span>INR {{food.price}}</span>
+              <button mat-button>SHARE</button>
+             </mat-card-actions>
+            </div>
+            <div fxFlex fxFlexOrder="1" fxFlex="40%">
+          
+                <mat-icon class="adding" >add</mat-icon>
+            </div>
+             </mat-card>
+            
+        </div>
+        </div>
+        
+    </div>
+  </div>
+    </mat-tab>
+    <mat-tab label="Reviews">Reviews</mat-tab>
+    <mat-tab label="Orders"> Orders </mat-tab>
+  </mat-tab-group>
+
+      
+ 

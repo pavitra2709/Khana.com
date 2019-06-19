@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {FlexLayoutModule} from '@angular/flex-layout'
-import{MaterialModule} from './material.module';
+import { AppRoutingModule }  from './app-routing/app-routing.module';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import{MaterialModule} from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
-import {CustomerComponent} from './dashboard/customer/customer.component';
-import {RestaurantListComponent} from './restaurant/restaurant-list/restaurant-list.component'
-import { SearchComponent } from './dashboard/search/search.component';
-import { FoodListComponent } from './food/food-list/food-list.component';
+import { RestaurantlistComponent } from './restaurant/restaurantlist/restaurantlist.component';
+import { CustomerComponent } from './dashboard/customer/customer.component';
+import { RestaurantsearchComponent } from './restaurant/restaurantsearch/restaurantsearch.component';
+import { FoodlistComponent } from './food/foodlist/foodlist.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RestaurantdetailComponent } from './restaurant/restaurantdetail/restaurantdetail.component';
+import { RestaurantsortbyComponent } from './restaurant/restaurantsortby/restaurantsortby.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
  
@@ -18,22 +23,26 @@ import { FoodListComponent } from './food/food-list/food-list.component';
     AppComponent,
     SignInComponent,
     SignUpComponent,
+    RestaurantlistComponent,
     CustomerComponent,
-    RestaurantListComponent,
-    SearchComponent,
-    FoodListComponent
+    // RestaurantfilterpipePipe,
+    RestaurantsearchComponent,
+    FoodlistComponent,
+    PageNotFoundComponent,
+    RestaurantdetailComponent,
+    RestaurantsortbyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
- }
+export class AppModule { }

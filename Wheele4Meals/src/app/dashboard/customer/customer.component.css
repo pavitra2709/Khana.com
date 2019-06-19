@@ -1,4 +1,3 @@
-
 .example-fill-remaining-space{
     flex: 1 1 auto;
 }
@@ -22,6 +21,7 @@
 .rating{
     color:white;
     background-color: green;
+    min-width:62px;
 
 }
 .category-btn{
@@ -30,4 +30,7 @@
     }
     .card-title{
         font-weight: bold;
+    }
+    mat-card{
+        margin-bottom: 30px;
     }

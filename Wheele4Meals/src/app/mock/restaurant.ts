@@ -9,7 +9,7 @@ export class Restaurant {
    id:number;
    name:string;
    manager:string;
-   fassaid:String;
+   fassaid:number;
    gstNumber:string;
    imageUrl:string;
    cuisine:string[];
